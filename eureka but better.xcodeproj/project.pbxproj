@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F44F4A3B235AA343003F8750 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44F4A3A235AA343003F8750 /* AppDelegate.swift */; };
+		F44F4A3D235AA343003F8750 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44F4A3C235AA343003F8750 /* ViewController.swift */; };
+		F44F4A40235AA343003F8750 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44F4A3E235AA343003F8750 /* Main.storyboard */; };
+		F44F4A42235AA344003F8750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F44F4A41235AA344003F8750 /* Assets.xcassets */; };
+		F44F4A45235AA344003F8750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44F4A43235AA344003F8750 /* LaunchScreen.storyboard */; };
+		F44F4A50235AA344003F8750 /* eureka_but_betterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44F4A4F235AA344003F8750 /* eureka_but_betterTests.swift */; };
+		F44F4A5B235AA344003F8750 /* eureka_but_betterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44F4A5A235AA344003F8750 /* eureka_but_betterUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F44F4A4C235AA344003F8750 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F44F4A2F235AA343003F8750 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F44F4A36235AA343003F8750;
+			remoteInfo = "eureka but better";
+		};
+		F44F4A57235AA344003F8750 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F44F4A2F235AA343003F8750 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F44F4A36235AA343003F8750;
+			remoteInfo = "eureka but better";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F44F4A37235AA343003F8750 /* eureka but better.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eureka but better.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F44F4A3A235AA343003F8750 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F44F4A3C235AA343003F8750 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F44F4A3F235AA343003F8750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F44F4A41235AA344003F8750 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F44F4A44235AA344003F8750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F44F4A46235AA344003F8750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F44F4A4B235AA344003F8750 /* eureka but betterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "eureka but betterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F44F4A4F235AA344003F8750 /* eureka_but_betterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eureka_but_betterTests.swift; sourceTree = "<group>"; };
+		F44F4A51235AA344003F8750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F44F4A56235AA344003F8750 /* eureka but betterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "eureka but betterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F44F4A5A235AA344003F8750 /* eureka_but_betterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eureka_but_betterUITests.swift; sourceTree = "<group>"; };
+		F44F4A5C235AA344003F8750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F44F4A34235AA343003F8750 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F44F4A48235AA344003F8750 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F44F4A53235AA344003F8750 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F44F4A2E235AA343003F8750 = {
+			isa = PBXGroup;
+			children = (
+				F44F4A39235AA343003F8750 /* eureka but better */,
+				F44F4A4E235AA344003F8750 /* eureka but betterTests */,
+				F44F4A59235AA344003F8750 /* eureka but betterUITests */,
+				F44F4A38235AA343003F8750 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F44F4A38235AA343003F8750 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F44F4A37235AA343003F8750 /* eureka but better.app */,
+				F44F4A4B235AA344003F8750 /* eureka but betterTests.xctest */,
+				F44F4A56235AA344003F8750 /* eureka but betterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F44F4A39235AA343003F8750 /* eureka but better */ = {
+			isa = PBXGroup;
+			children = (
+				F44F4A3A235AA343003F8750 /* AppDelegate.swift */,
+				F44F4A3C235AA343003F8750 /* ViewController.swift */,
+				F44F4A3E235AA343003F8750 /* Main.storyboard */,
+				F44F4A41235AA344003F8750 /* Assets.xcassets */,
+				F44F4A43235AA344003F8750 /* LaunchScreen.storyboard */,
+				F44F4A46235AA344003F8750 /* Info.plist */,
+			);
+			path = "eureka but better";
+			sourceTree = "<group>";
+		};
+		F44F4A4E235AA344003F8750 /* eureka but betterTests */ = {
+			isa = PBXGroup;
+			children = (
+				F44F4A4F235AA344003F8750 /* eureka_but_betterTests.swift */,
+				F44F4A51235AA344003F8750 /* Info.plist */,
+			);
+			path = "eureka but betterTests";
+			sourceTree = "<group>";
+		};
+		F44F4A59235AA344003F8750 /* eureka but betterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F44F4A5A235AA344003F8750 /* eureka_but_betterUITests.swift */,
+				F44F4A5C235AA344003F8750 /* Info.plist */,
+			);
+			path = "eureka but betterUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F44F4A36235AA343003F8750 /* eureka but better */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F44F4A5F235AA344003F8750 /* Build configuration list for PBXNativeTarget "eureka but better" */;
+			buildPhases = (
+				F44F4A33235AA343003F8750 /* Sources */,
+				F44F4A34235AA343003F8750 /* Frameworks */,
+				F44F4A35235AA343003F8750 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "eureka but better";
+			productName = "eureka but better";
+			productReference = F44F4A37235AA343003F8750 /* eureka but better.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F44F4A4A235AA344003F8750 /* eureka but betterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F44F4A62235AA344003F8750 /* Build configuration list for PBXNativeTarget "eureka but betterTests" */;
+			buildPhases = (
+				F44F4A47235AA344003F8750 /* Sources */,
+				F44F4A48235AA344003F8750 /* Frameworks */,
+				F44F4A49235AA344003F8750 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F44F4A4D235AA344003F8750 /* PBXTargetDependency */,
+			);
+			name = "eureka but betterTests";
+			productName = "eureka but betterTests";
+			productReference = F44F4A4B235AA344003F8750 /* eureka but betterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F44F4A55235AA344003F8750 /* eureka but betterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F44F4A65235AA344003F8750 /* Build configuration list for PBXNativeTarget "eureka but betterUITests" */;
+			buildPhases = (
+				F44F4A52235AA344003F8750 /* Sources */,
+				F44F4A53235AA344003F8750 /* Frameworks */,
+				F44F4A54235AA344003F8750 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F44F4A58235AA344003F8750 /* PBXTargetDependency */,
+			);
+			name = "eureka but betterUITests";
+			productName = "eureka but betterUITests";
+			productReference = F44F4A56235AA344003F8750 /* eureka but betterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F44F4A2F235AA343003F8750 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = student01;
+				TargetAttributes = {
+					F44F4A36235AA343003F8750 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					F44F4A4A235AA344003F8750 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = F44F4A36235AA343003F8750;
+					};
+					F44F4A55235AA344003F8750 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = F44F4A36235AA343003F8750;
+					};
+				};
+			};
+			buildConfigurationList = F44F4A32235AA343003F8750 /* Build configuration list for PBXProject "eureka but better" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F44F4A2E235AA343003F8750;
+			productRefGroup = F44F4A38235AA343003F8750 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F44F4A36235AA343003F8750 /* eureka but better */,
+				F44F4A4A235AA344003F8750 /* eureka but betterTests */,
+				F44F4A55235AA344003F8750 /* eureka but betterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F44F4A35235AA343003F8750 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F44F4A45235AA344003F8750 /* LaunchScreen.storyboard in Resources */,
+				F44F4A42235AA344003F8750 /* Assets.xcassets in Resources */,
+				F44F4A40235AA343003F8750 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F44F4A49235AA344003F8750 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F44F4A54235AA344003F8750 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F44F4A33235AA343003F8750 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F44F4A3D235AA343003F8750 /* ViewController.swift in Sources */,
+				F44F4A3B235AA343003F8750 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F44F4A47235AA344003F8750 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F44F4A50235AA344003F8750 /* eureka_but_betterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F44F4A52235AA344003F8750 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F44F4A5B235AA344003F8750 /* eureka_but_betterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F44F4A4D235AA344003F8750 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F44F4A36235AA343003F8750 /* eureka but better */;
+			targetProxy = F44F4A4C235AA344003F8750 /* PBXContainerItemProxy */;
+		};
+		F44F4A58235AA344003F8750 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F44F4A36235AA343003F8750 /* eureka but better */;
+			targetProxy = F44F4A57235AA344003F8750 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F44F4A3E235AA343003F8750 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F44F4A3F235AA343003F8750 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F44F4A43235AA344003F8750 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F44F4A44235AA344003F8750 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F44F4A5D235AA344003F8750 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F44F4A5E235AA344003F8750 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F44F4A60235AA344003F8750 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "eureka but better/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "issac.eureka-but-better";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F44F4A61235AA344003F8750 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "eureka but better/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "issac.eureka-but-better";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F44F4A63235AA344003F8750 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "eureka but betterTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "issac.eureka-but-betterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eureka but better.app/eureka but better";
+			};
+			name = Debug;
+		};
+		F44F4A64235AA344003F8750 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "eureka but betterTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "issac.eureka-but-betterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eureka but better.app/eureka but better";
+			};
+			name = Release;
+		};
+		F44F4A66235AA344003F8750 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "eureka but betterUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "issac.eureka-but-betterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "eureka but better";
+			};
+			name = Debug;
+		};
+		F44F4A67235AA344003F8750 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "eureka but betterUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "issac.eureka-but-betterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "eureka but better";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F44F4A32235AA343003F8750 /* Build configuration list for PBXProject "eureka but better" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F44F4A5D235AA344003F8750 /* Debug */,
+				F44F4A5E235AA344003F8750 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F44F4A5F235AA344003F8750 /* Build configuration list for PBXNativeTarget "eureka but better" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F44F4A60235AA344003F8750 /* Debug */,
+				F44F4A61235AA344003F8750 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F44F4A62235AA344003F8750 /* Build configuration list for PBXNativeTarget "eureka but betterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F44F4A63235AA344003F8750 /* Debug */,
+				F44F4A64235AA344003F8750 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F44F4A65235AA344003F8750 /* Build configuration list for PBXNativeTarget "eureka but betterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F44F4A66235AA344003F8750 /* Debug */,
+				F44F4A67235AA344003F8750 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F44F4A2F235AA343003F8750 /* Project object */;
+}
