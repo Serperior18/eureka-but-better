@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		530A85E0235ABB5A00D48FA3 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530A85DF235ABB5A00D48FA3 /* SafariServices.framework */; };
 		53230AD82363F85000DFB366 /* Screenshot 2019-10-26 at 11.40.54 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = 53230AD72363F85000DFB366 /* Screenshot 2019-10-26 at 11.40.54 AM.png */; };
+		533E8F84236A722D0070DD86 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533E8F83236A722D0070DD86 /* AVFoundation.framework */; };
+		533E8F86236A74860070DD86 /* BOMB_SIREN-BOMB_SIREN-247265934.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 533E8F85236A74860070DD86 /* BOMB_SIREN-BOMB_SIREN-247265934.mp3 */; };
 		F44F4A3B235AA343003F8750 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44F4A3A235AA343003F8750 /* AppDelegate.swift */; };
 		F44F4A3D235AA343003F8750 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44F4A3C235AA343003F8750 /* ViewController.swift */; };
 		F44F4A40235AA343003F8750 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44F4A3E235AA343003F8750 /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		530A85DF235ABB5A00D48FA3 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		53230AD72363F85000DFB366 /* Screenshot 2019-10-26 at 11.40.54 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screenshot 2019-10-26 at 11.40.54 AM.png"; path = "../../../Downloads/Screenshot 2019-10-26 at 11.40.54 AM.png"; sourceTree = "<group>"; };
+		533E8F83236A722D0070DD86 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		533E8F85236A74860070DD86 /* BOMB_SIREN-BOMB_SIREN-247265934.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "BOMB_SIREN-BOMB_SIREN-247265934.mp3"; path = "../../../Downloads/BOMB_SIREN-BOMB_SIREN-247265934.mp3"; sourceTree = "<group>"; };
 		F44F4A37235AA343003F8750 /* eureka but better.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eureka but better.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44F4A3A235AA343003F8750 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F44F4A3C235AA343003F8750 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				533E8F84236A722D0070DD86 /* AVFoundation.framework in Frameworks */,
 				530A85E0235ABB5A00D48FA3 /* SafariServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +87,7 @@
 		530A85DE235ABB5900D48FA3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				533E8F83236A722D0070DD86 /* AVFoundation.framework */,
 				530A85DF235ABB5A00D48FA3 /* SafariServices.framework */,
 			);
 			name = Frameworks;
@@ -91,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				F44F4A39235AA343003F8750 /* eureka but better */,
-				F44F4A4E235AA344003F8750 /* eureka but betterTests */,
 				F44F4A59235AA344003F8750 /* eureka but betterUITests */,
 				F44F4A38235AA343003F8750 /* Products */,
 				530A85DE235ABB5900D48FA3 /* Frameworks */,
@@ -118,6 +123,8 @@
 				F44F4A43235AA344003F8750 /* LaunchScreen.storyboard */,
 				F44F4A46235AA344003F8750 /* Info.plist */,
 				53230AD72363F85000DFB366 /* Screenshot 2019-10-26 at 11.40.54 AM.png */,
+				533E8F85236A74860070DD86 /* BOMB_SIREN-BOMB_SIREN-247265934.mp3 */,
+				F44F4A4E235AA344003F8750 /* eureka but betterTests */,
 			);
 			path = "eureka but better";
 			sourceTree = "<group>";
@@ -246,6 +253,7 @@
 			files = (
 				F44F4A45235AA344003F8750 /* LaunchScreen.storyboard in Resources */,
 				F44F4A42235AA344003F8750 /* Assets.xcassets in Resources */,
+				533E8F86236A74860070DD86 /* BOMB_SIREN-BOMB_SIREN-247265934.mp3 in Resources */,
 				53230AD82363F85000DFB366 /* Screenshot 2019-10-26 at 11.40.54 AM.png in Resources */,
 				F44F4A40235AA343003F8750 /* Main.storyboard in Resources */,
 			);
