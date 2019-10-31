@@ -17,5 +17,19 @@ struct Subjects: Codable {
         self.mainSubject = mainSubject
         self.description = description
         self.grade = grade
+        
+        func loadSampleData() -> [Subjects] {
+           
+           
+            var subjects = [
+                Subjects(mainSubject: "math", description: "algebra", grade: "87"),
+                Subjects(mainSubject: "english", description: "compo", grade: "56"),
+                Subjects(mainSubject: "science", description: "biology", grade: "78"),
+                Subjects(mainSubject: "geography", description: "housing", grade: "74"),
+            ]
+            return subjects
+        }
     }
+    
+    
 }

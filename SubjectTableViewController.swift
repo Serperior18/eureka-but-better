@@ -52,10 +52,10 @@ class SubjectTableViewController: UITableViewController {
         // Configure the cell...
 
         if let cell = cell as? SubjectTableViewCell {
-            let potato = Keithnumber1[indexPath.row]
-            cell.subject.text = potato.mainSubject
-            cell.keithDESCRIPTION.text = potato.description
-            cell.keithGrade.text = potato.grade
+            let subjects = Keithnumber1[indexPath.row]
+            cell.subject.text = subjects.mainSubject
+            cell.keithDESCRIPTION.text = subjects.description
+            cell.keithGrade.text = subjects.grade
         }
         
         return cell
