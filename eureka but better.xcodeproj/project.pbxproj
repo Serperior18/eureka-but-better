@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		530A85E0235ABB5A00D48FA3 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530A85DF235ABB5A00D48FA3 /* SafariServices.framework */; };
+		53230AD82363F85000DFB366 /* Screenshot 2019-10-26 at 11.40.54 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = 53230AD72363F85000DFB366 /* Screenshot 2019-10-26 at 11.40.54 AM.png */; };
 		F44F4A3B235AA343003F8750 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44F4A3A235AA343003F8750 /* AppDelegate.swift */; };
 		F44F4A3D235AA343003F8750 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44F4A3C235AA343003F8750 /* ViewController.swift */; };
 		F44F4A40235AA343003F8750 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44F4A3E235AA343003F8750 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		530A85DF235ABB5A00D48FA3 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		53230AD72363F85000DFB366 /* Screenshot 2019-10-26 at 11.40.54 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screenshot 2019-10-26 at 11.40.54 AM.png"; path = "../../../Downloads/Screenshot 2019-10-26 at 11.40.54 AM.png"; sourceTree = "<group>"; };
 		F44F4A37235AA343003F8750 /* eureka but better.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eureka but better.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44F4A3A235AA343003F8750 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F44F4A3C235AA343003F8750 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				530A85E0235ABB5A00D48FA3 /* SafariServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		530A85DE235ABB5900D48FA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				530A85DF235ABB5A00D48FA3 /* SafariServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F44F4A2E235AA343003F8750 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +94,7 @@
 				F44F4A4E235AA344003F8750 /* eureka but betterTests */,
 				F44F4A59235AA344003F8750 /* eureka but betterUITests */,
 				F44F4A38235AA343003F8750 /* Products */,
+				530A85DE235ABB5900D48FA3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +117,7 @@
 				F44F4A41235AA344003F8750 /* Assets.xcassets */,
 				F44F4A43235AA344003F8750 /* LaunchScreen.storyboard */,
 				F44F4A46235AA344003F8750 /* Info.plist */,
+				53230AD72363F85000DFB366 /* Screenshot 2019-10-26 at 11.40.54 AM.png */,
 			);
 			path = "eureka but better";
 			sourceTree = "<group>";
@@ -231,6 +246,7 @@
 			files = (
 				F44F4A45235AA344003F8750 /* LaunchScreen.storyboard in Resources */,
 				F44F4A42235AA344003F8750 /* Assets.xcassets in Resources */,
+				53230AD82363F85000DFB366 /* Screenshot 2019-10-26 at 11.40.54 AM.png in Resources */,
 				F44F4A40235AA343003F8750 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

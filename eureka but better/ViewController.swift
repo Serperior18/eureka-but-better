@@ -7,16 +7,18 @@
 //
 
 import UIKit
+import SafariServices
 
-class ViewController: UIViewController {
-    @IBOutlet weak var searchButton: UIButton!
+class ViewController: UIViewController, SFSafariViewControllerDelegate {
+   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("hi")
+       
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    
 }
+
 
