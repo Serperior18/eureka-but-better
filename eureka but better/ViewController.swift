@@ -19,15 +19,18 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     @IBOutlet weak var secondsLabel: UILabel!
     
     var twoDigit = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61"]
-    var timerwhat = 1 // <- how many seconds
+    var timerwhat = 5 // <- how many seconds
     var timerwhat2 = 0 // <- how many minutes
     var timer: Timer?
     var timeElapsed = 0
     var runFunction = false
     var subject: [Subject]!
+    var numOfSubjects = 0
     var subjectNum = 0
     var subjectShow = ""
     var descriptionShow = ""
+    
+    var importantSubjects: [Subject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +53,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
             print("no Subjects")
         }
         
-        let importantSubjects = subject.sorted{
+        importantSubjects = subject.sorted{
             $0.grade < $1.grade
            
         }
@@ -61,25 +64,33 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         
         subjectLabel.text = subjectShow
         descriptionLabel.text = descriptionShow
+        numOfSubjects = importantSubjects.count
     }
     
     
     
     @IBAction func startButton(_ sender: Any) {
     runFunction = true
+        
     }
+    
     
     @objc func updateCounter() {
         timeElapsed += 1
         if !runFunction { return }
         if timerwhat == 0 && timerwhat2 == 0 {
-            timerwhat = 60
-            timerwhat2 = 0
             fnafAlarm.play()
             subjectNum += 1
-            subjectLabel.text = subjectShow
-            descriptionLabel.text = descriptionShow
+            
+            if subjectNum == numOfSubjects {
+                subjectNum = 0
+            }
+            
+            subjectLabel.text = importantSubjects[subjectNum].mainSubject
+            descriptionLabel.text = importantSubjects[subjectNum].description
             timer?.invalidate()
+            timerwhat = 5 //Seconds
+            timerwhat2 = 0 // minutes
             
         } else {
             timerwhat -= 1
