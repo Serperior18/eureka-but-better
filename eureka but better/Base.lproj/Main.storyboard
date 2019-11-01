@@ -103,6 +103,35 @@
             </objects>
             <point key="canvasLocation" x="-1353.6231884057972" y="841.74107142857144"/>
         </scene>
+        <!--Timer Done View Controller-->
+        <scene sceneID="xdZ-Te-vth">
+            <objects>
+                <viewController id="Plc-m5-W6R" customClass="TimerDoneViewController" customModule="eureka_but_better" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r5T-OX-Jr2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XuQ-jT-xU2">
+                                <rect key="frame" x="91" y="695" width="232" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Continue" backgroundImage="Screenshot 2019-11-01 at 2.19.18 PM"/>
+                                <connections>
+                                    <action selector="continueButtonPressed:" destination="Plc-m5-W6R" eventType="touchUpInside" id="hZ5-OX-rbH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="NAS-tW-7Ai"/>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="XuQ-jT-xU2" id="dJK-tc-jAd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r03-xb-99f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="841.74107142857144"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -118,10 +147,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qA-SA-a2W">
-                                <rect key="frame" x="165" y="744" width="46" height="68"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screenshot 2019-11-01 at 1.57.19 PM" translatesAutoresizingMaskIntoConstraints="NO" id="Yho-dk-t5a">
+                                <rect key="frame" x="95" y="192" width="240" height="196"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qA-SA-a2W">
+                                <rect key="frame" x="107" y="744" width="198" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Start" backgroundImage="Screenshot 2019-11-01 at 2.19.18 PM">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h5D-CS-HQg"/>
                                 </connections>
@@ -185,15 +221,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Next Subject" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ug-CX-7ha">
+                                <rect key="frame" x="153" y="387" width="124" height="122"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="WVr-gt-uCq" id="n2y-xE-9nl"/>
                         <outlet property="minutesLabel" destination="0Aq-KM-zfk" id="cKo-a5-f7g"/>
+                        <outlet property="nextSubjectLabel" destination="7ug-CX-7ha" id="4cr-gY-7sO"/>
                         <outlet property="secondsLabel" destination="MQL-At-Nhd" id="Yia-DB-uMg"/>
                         <outlet property="subjectLabel" destination="Vgo-Jb-bnC" id="cwM-EU-ssn"/>
+                        <segue destination="Plc-m5-W6R" kind="presentation" identifier="studyDone" id="QB2-LF-GUp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -448,4 +493,8 @@
             <point key="canvasLocation" x="1613" y="-563"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Screenshot 2019-11-01 at 1.57.19 PM" width="226" height="159"/>
+        <image name="Screenshot 2019-11-01 at 2.19.18 PM" width="223" height="82"/>
+    </resources>
 </document>
