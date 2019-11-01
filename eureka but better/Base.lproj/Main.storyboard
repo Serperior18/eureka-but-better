@@ -19,23 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="credits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjn-z2-Jb3">
-                                <rect key="frame" x="186" y="349" width="106" height="157"/>
+                                <rect key="frame" x="154" y="44" width="106" height="157"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eaM-kj-U8F">
-                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
-                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="lU0-BW-SdO" firstAttribute="trailing" secondItem="eaM-kj-U8F" secondAttribute="trailing" id="0tZ-hw-h0i"/>
-                            <constraint firstItem="eaM-kj-U8F" firstAttribute="leading" secondItem="lU0-BW-SdO" secondAttribute="leading" id="Dqp-Xh-0JV"/>
-                            <constraint firstItem="eaM-kj-U8F" firstAttribute="top" secondItem="lU0-BW-SdO" secondAttribute="top" id="Pvz-gV-qBQ"/>
-                            <constraint firstItem="lU0-BW-SdO" firstAttribute="bottom" secondItem="eaM-kj-U8F" secondAttribute="bottom" constant="50" id="li2-OK-uDw"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lU0-BW-SdO"/>
                     </view>
                 </viewController>
@@ -199,8 +190,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="descriptionLabel" destination="WVr-gt-uCq" id="n2y-xE-9nl"/>
                         <outlet property="minutesLabel" destination="0Aq-KM-zfk" id="cKo-a5-f7g"/>
                         <outlet property="secondsLabel" destination="MQL-At-Nhd" id="Yia-DB-uMg"/>
+                        <outlet property="subjectLabel" destination="Vgo-Jb-bnC" id="cwM-EU-ssn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
