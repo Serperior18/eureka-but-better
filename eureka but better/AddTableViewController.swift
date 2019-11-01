@@ -16,12 +16,13 @@ class AddTableViewController: UITableViewController {
        
     }
 
-
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 
    
 
-    @IBAction func unwindToSubjectsTable(segue: UIStoryboardSegue) {
-        
-    }
+    
 
 }

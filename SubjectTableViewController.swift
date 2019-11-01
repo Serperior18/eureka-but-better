@@ -29,6 +29,12 @@ class SubjectTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    
+    @IBAction func unwindToSubjectsTable(segue: UIStoryboardSegue) {
+        
+    }
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
