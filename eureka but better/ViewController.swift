@@ -22,8 +22,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     var timer: Timer?
     var timeElapsed = 0
     var runFunction = false
-   
-    
+    var subject: [Subject]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +39,21 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
             print(error)
         }
         // Do any additional setup after loading the view, typically from a nib.
+        if let loadedSubjects = Subject.loadFromFile() {
+            subject = loadedSubjects
+        } else {
+            print("no Subjects")
+        }
+        
+        let importantSubjects = subject.sorted{
+            $0.grade < $1.grade
+           
+        }
+         print(importantSubjects)
+       
     }
+    
+    
     
     @IBAction func startButton(_ sender: Any) {
     runFunction = true
@@ -50,7 +63,10 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         timeElapsed += 1
         if !runFunction { return }
         if timerwhat == 0 && timerwhat2 == 0 {
-            timerwhat = 0
+            timerwhat = 60
+            timerwhat2 = 0
+            fnafAlarm.play()
+            
         } else {
             timerwhat -= 1
             if timerwhat < 0 {
@@ -66,9 +82,10 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     
     
     
-    @IBAction func soundButton(_ sender: Any) {
-        fnafAlarm.play()
-    }
+    
+    
+    
+    
 }
 
 

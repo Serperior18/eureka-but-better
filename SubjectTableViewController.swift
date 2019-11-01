@@ -85,8 +85,10 @@ class SubjectTableViewController: UITableViewController {
         return cell
     }
     
-   
-    @IBAction func doneButton(_ sender: Any) {
+    
+    @IBAction func doneButtonPressed(_ sender: Any) {
+        print("its pressed")
         dismiss(animated: true, completion: nil)
     }
+    
 }
