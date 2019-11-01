@@ -13,7 +13,7 @@ class AddTableViewController: UITableViewController {
     @IBOutlet weak var subjectLabel: UITextField!
     @IBOutlet weak var descriptionLabel: UITextField!
     @IBOutlet weak var gradeLabel: UITextField!
-    var subject: Subjects!
+    var subject: Subject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,8 @@ class AddTableViewController: UITableViewController {
         let grade = gradeLabel.text ?? ""
         
         if segue.identifier == "unwindSave"{
-            subject = Subjects(mainSubject: mainSubject, description: description, grade: grade)
+            subject = Subject(mainSubject: mainSubject, description: description, grade: grade)
+            Subject.saveToFile(subject: [subject])
         }
     }
 

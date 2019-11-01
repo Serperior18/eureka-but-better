@@ -10,24 +10,24 @@ import UIKit
 
 class SubjectTableViewController: UITableViewController {
 
-    var subjects = [
-    Subjects(mainSubject: "keith", description: "number", grade: "1"),
-   ]
+    var subject: [Subject]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        if let loadedSubjects = Subject.loadFromFile() {
+            subject = loadedSubjects
+        } else {
+            subject = Subject.loadSampleData()
+        }
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
 
     
     @IBAction func unwindToSubjectsTable(segue: UIStoryboardSegue) {
         if segue.identifier == "unwindSave" {
             if let sourceVC = segue.source as? AddTableViewController {
-                subjects.append(sourceVC.subject)
+                subject.append(sourceVC.subject)
                 tableView.reloadData()
             }
         }
@@ -37,6 +37,14 @@ class SubjectTableViewController: UITableViewController {
     
     // MARK: - Table view data source
 
+    @IBAction func editButtonPressed(_ sender: Any) {
+        if tableView.isEditing {
+            tableView.setEditing(false, animated: true)
+        } else {
+            tableView.setEditing(true, animated: true)
+        }
+        
+    }
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -44,21 +52,31 @@ class SubjectTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return subjects.count
+        return subject.count
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 140
+        
     }
 
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            subject.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.reloadData()
+            Subject.saveToFile(subject: subject)
+        } else if editingStyle == .insert {
+            
+        }
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "keith", for: indexPath)
 
-        // Configure the cell...
-
         if let cell = cell as? SubjectTableViewCell {
-            let subjects = self.subjects[indexPath.row]
+            let subjects = self.subject[indexPath.row]
             cell.subject.text = subjects.mainSubject
             cell.keithDESCRIPTION.text = subjects.description
             cell.keithGrade.text = subjects.grade
@@ -67,52 +85,7 @@ class SubjectTableViewController: UITableViewController {
         return cell
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   
     @IBAction func doneButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

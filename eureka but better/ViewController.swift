@@ -11,15 +11,28 @@ import SafariServices
 import AVFoundation
 
 class ViewController: UIViewController, SFSafariViewControllerDelegate {
+    
    var fnafAlarm = AVAudioPlayer()
+    @IBOutlet weak var minutesLabel: UILabel!
+    @IBOutlet weak var secondsLabel: UILabel!
+    
+    var twoDigit = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61"]
+    var timerwhat = 3 // <- how many seconds
+    var timerwhat2 = 60 // <- how many minutes
+    var timer: Timer?
+    var timeElapsed = 0
+    var runFunction = false
+   
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+        
         let sound = Bundle.main.path(forResource: "five-nights-at-freddys-6-am", ofType: "mp3")
         do {
-            
+                
             fnafAlarm = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
             
         }
@@ -28,6 +41,30 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         }
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    @IBAction func startButton(_ sender: Any) {
+    runFunction = true
+    }
+    
+    @objc func updateCounter() {
+        timeElapsed += 1
+        if !runFunction { return }
+        if timerwhat == 0 && timerwhat2 == 0 {
+            timerwhat = 0
+        } else {
+            timerwhat -= 1
+            if timerwhat < 0 {
+                timerwhat2 -= 1
+                timerwhat = 59
+                secondsLabel.text = twoDigit[timerwhat]
+            }
+            secondsLabel.text = twoDigit[timerwhat]
+            minutesLabel.text = twoDigit[timerwhat2]
+        }
+    }
+
+    
+    
     
     @IBAction func soundButton(_ sender: Any) {
         fnafAlarm.play()
