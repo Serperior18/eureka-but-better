@@ -21,7 +21,7 @@ struct Subjects: Codable {
         func loadSampleData() -> [Subjects] {
            
            
-            var subjects = [
+            let subjects = [
                 Subjects(mainSubject: "math", description: "algebra", grade: "87"),
                 Subjects(mainSubject: "english", description: "compo", grade: "56"),
                 Subjects(mainSubject: "science", description: "biology", grade: "78"),

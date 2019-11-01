@@ -10,15 +10,9 @@ import UIKit
 
 class SubjectTableViewController: UITableViewController {
 
-    var Keithnumber1 = [
+    var subjects = [
     Subjects(mainSubject: "keith", description: "number", grade: "1"),
-    Subjects(mainSubject: "keith", description: "number", grade: "1"),
-    Subjects(mainSubject: "keith", description: "number", grade: "1"),
-    Subjects(mainSubject: "keith", description: "number", grade: "1"),
-    Subjects(mainSubject: "keith", description: "number", grade: "1"),
-    Subjects(mainSubject: "keith", description: "number", grade: "1"),
-    Subjects(mainSubject: "keith", description: "number", grade: "1"),
-    Subjects(mainSubject: "keith", description: "number", grade: "1")]
+   ]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,6 +25,12 @@ class SubjectTableViewController: UITableViewController {
 
     
     @IBAction func unwindToSubjectsTable(segue: UIStoryboardSegue) {
+        if segue.identifier == "unwindSave" {
+            if let sourceVC = segue.source as? AddTableViewController {
+                subjects.append(sourceVC.subject)
+                tableView.reloadData()
+            }
+        }
         
     }
     
@@ -44,7 +44,7 @@ class SubjectTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Keithnumber1.count
+        return subjects.count
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -58,7 +58,7 @@ class SubjectTableViewController: UITableViewController {
         // Configure the cell...
 
         if let cell = cell as? SubjectTableViewCell {
-            let subjects = Keithnumber1[indexPath.row]
+            let subjects = self.subjects[indexPath.row]
             cell.subject.text = subjects.mainSubject
             cell.keithDESCRIPTION.text = subjects.description
             cell.keithGrade.text = subjects.grade

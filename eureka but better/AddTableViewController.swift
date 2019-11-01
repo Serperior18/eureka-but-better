@@ -13,7 +13,7 @@ class AddTableViewController: UITableViewController {
     @IBOutlet weak var subjectLabel: UITextField!
     @IBOutlet weak var descriptionLabel: UITextField!
     @IBOutlet weak var gradeLabel: UITextField!
-    var subject = Subjects.self
+    var subject: Subjects!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +21,12 @@ class AddTableViewController: UITableViewController {
        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let subject = subjectlabel.text
+        let mainSubject = subjectLabel.text ?? ""
+        let description = descriptionLabel.text ?? ""
+        let grade = gradeLabel.text ?? ""
+        
         if segue.identifier == "unwindSave"{
-            subject = Subjects(mainSubject: subjectl, description: description, grade: gradeLabel.text)
+            subject = Subjects(mainSubject: mainSubject, description: description, grade: grade)
         }
     }
 
