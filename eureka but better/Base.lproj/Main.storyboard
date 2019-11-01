@@ -328,21 +328,29 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gcn-kJ-1xV">
-                                                    <rect key="frame" x="10" y="0.0" width="394" height="44"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="44" id="Kkc-MR-dsc"/>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="dJ3-Bu-Si1"/>
-                                                    </constraints>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
-                                                </textField>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dh4-W3-vkT">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                    <subviews>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bwG-M8-kXA">
+                                                            <rect key="frame" x="0.0" y="13.5" width="207" height="17"/>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pecentage out of 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCJ-Kp-eSM">
+                                                            <rect key="frame" x="207" y="11.5" width="207" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="gcn-kJ-1xV" firstAttribute="top" secondItem="grd-Fq-Dld" secondAttribute="top" id="Pcd-sC-GYa"/>
-                                                <constraint firstItem="gcn-kJ-1xV" firstAttribute="leading" secondItem="grd-Fq-Dld" secondAttribute="leading" constant="10" id="i2T-La-AXo"/>
-                                                <constraint firstAttribute="trailing" secondItem="gcn-kJ-1xV" secondAttribute="trailing" constant="10" id="q5k-Vo-BlI"/>
+                                                <constraint firstItem="dh4-W3-vkT" firstAttribute="leading" secondItem="grd-Fq-Dld" secondAttribute="leading" id="3nX-ab-hOO"/>
+                                                <constraint firstAttribute="bottom" secondItem="dh4-W3-vkT" secondAttribute="bottom" id="mAa-qf-kj8"/>
+                                                <constraint firstAttribute="trailing" secondItem="dh4-W3-vkT" secondAttribute="trailing" id="pvm-SE-KLh"/>
+                                                <constraint firstItem="dh4-W3-vkT" firstAttribute="top" secondItem="grd-Fq-Dld" secondAttribute="top" id="vbe-zc-sK0"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -366,6 +374,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="3fz-oT-FcJ" id="oBh-7S-2Ww"/>
+                        <outlet property="gradeLabel" destination="bwG-M8-kXA" id="0Dy-UQ-l6d"/>
+                        <outlet property="subjectLabel" destination="zlN-ri-gX2" id="2M7-wm-qov"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAn-iZ-Q1s" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="lvu-mC-hY0" userLabel="Exit" sceneMemberID="exit"/>
