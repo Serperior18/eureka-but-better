@@ -96,7 +96,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
             fnafAlarm.play()
             subjectNum += 1
             performSegue(withIdentifier: "studyDone", sender: nil)
-            if subjectNum == numOfSubjects {
+            if subjectNum == numOfSubjects || subjectNum > numOfSubjects {
                 subjectNum = 0
             }
             

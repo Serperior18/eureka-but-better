@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		530A85E0235ABB5A00D48FA3 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530A85DF235ABB5A00D48FA3 /* SafariServices.framework */; };
 		531F505D236BFA4B00D3043D /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F505B236BFA4B00D3043D /* CreditsViewController.swift */; };
+		5327674F236C4E9B00FF81F3 /* TimerDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5327674E236C4E9B00FF81F3 /* TimerDoneViewController.swift */; };
 		533D5D93236ACDE100B31CD4 /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533D5D92236ACDE100B31CD4 /* AddTableViewController.swift */; };
 		533E8F84236A722D0070DD86 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533E8F83236A722D0070DD86 /* AVFoundation.framework */; };
 		533E8F88236A7C100070DD86 /* SubjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E8F87236A7C100070DD86 /* SubjectTableViewCell.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		530A85DF235ABB5A00D48FA3 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		531F505B236BFA4B00D3043D /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
+		5327674E236C4E9B00FF81F3 /* TimerDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDoneViewController.swift; sourceTree = "<group>"; };
 		533D5D92236ACDE100B31CD4 /* AddTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTableViewController.swift; sourceTree = "<group>"; };
 		533E8F83236A722D0070DD86 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		533E8F87236A7C100070DD86 /* SubjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTableViewCell.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				F44F4A3A235AA343003F8750 /* AppDelegate.swift */,
 				F44F4A3C235AA343003F8750 /* ViewController.swift */,
 				F44F4A3E235AA343003F8750 /* Main.storyboard */,
+				5327674E236C4E9B00FF81F3 /* TimerDoneViewController.swift */,
 				531F505B236BFA4B00D3043D /* CreditsViewController.swift */,
 				533E8F93236AAF350070DD86 /* SettingsViewController.swift */,
 				533D5D92236ACDE100B31CD4 /* AddTableViewController.swift */,
@@ -302,6 +305,7 @@
 				533E8F88236A7C100070DD86 /* SubjectTableViewCell.swift in Sources */,
 				F44F4A3B235AA343003F8750 /* AppDelegate.swift in Sources */,
 				533E8F94236AAF350070DD86 /* SettingsViewController.swift in Sources */,
+				5327674F236C4E9B00FF81F3 /* TimerDoneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
