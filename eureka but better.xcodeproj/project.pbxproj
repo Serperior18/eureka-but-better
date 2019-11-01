@@ -10,7 +10,6 @@
 		530A85E0235ABB5A00D48FA3 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530A85DF235ABB5A00D48FA3 /* SafariServices.framework */; };
 		533D5D93236ACDE100B31CD4 /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533D5D92236ACDE100B31CD4 /* AddTableViewController.swift */; };
 		533E8F84236A722D0070DD86 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533E8F83236A722D0070DD86 /* AVFoundation.framework */; };
-		533E8F86236A74860070DD86 /* BOMB_SIREN-BOMB_SIREN-247265934.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 533E8F85236A74860070DD86 /* BOMB_SIREN-BOMB_SIREN-247265934.mp3 */; };
 		533E8F88236A7C100070DD86 /* SubjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E8F87236A7C100070DD86 /* SubjectTableViewCell.swift */; };
 		533E8F8E236A7FA40070DD86 /* SubjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E8F8D236A7FA40070DD86 /* SubjectTableViewController.swift */; };
 		533E8F90236AA3D80070DD86 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E8F8F236AA3D80070DD86 /* File.swift */; };
@@ -22,6 +21,7 @@
 		F44F4A45235AA344003F8750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44F4A43235AA344003F8750 /* LaunchScreen.storyboard */; };
 		F44F4A50235AA344003F8750 /* eureka_but_betterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44F4A4F235AA344003F8750 /* eureka_but_betterTests.swift */; };
 		F44F4A5B235AA344003F8750 /* eureka_but_betterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44F4A5A235AA344003F8750 /* eureka_but_betterUITests.swift */; };
+		F4F3296D236BC77100633A89 /* five-nights-at-freddys-6-am.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4F3296C236BC77100633A89 /* five-nights-at-freddys-6-am.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,6 @@
 		530A85DF235ABB5A00D48FA3 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		533D5D92236ACDE100B31CD4 /* AddTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTableViewController.swift; sourceTree = "<group>"; };
 		533E8F83236A722D0070DD86 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		533E8F85236A74860070DD86 /* BOMB_SIREN-BOMB_SIREN-247265934.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "BOMB_SIREN-BOMB_SIREN-247265934.mp3"; path = "../../../Downloads/BOMB_SIREN-BOMB_SIREN-247265934.mp3"; sourceTree = "<group>"; };
 		533E8F87236A7C100070DD86 /* SubjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTableViewCell.swift; sourceTree = "<group>"; };
 		533E8F8D236A7FA40070DD86 /* SubjectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SubjectTableViewController.swift; path = ../SubjectTableViewController.swift; sourceTree = "<group>"; };
 		533E8F8F236AA3D80070DD86 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
@@ -63,6 +62,7 @@
 		F44F4A56235AA344003F8750 /* eureka but betterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "eureka but betterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44F4A5A235AA344003F8750 /* eureka_but_betterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eureka_but_betterUITests.swift; sourceTree = "<group>"; };
 		F44F4A5C235AA344003F8750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4F3296C236BC77100633A89 /* five-nights-at-freddys-6-am.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "five-nights-at-freddys-6-am.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +135,7 @@
 				F44F4A41235AA344003F8750 /* Assets.xcassets */,
 				F44F4A43235AA344003F8750 /* LaunchScreen.storyboard */,
 				F44F4A46235AA344003F8750 /* Info.plist */,
-				533E8F85236A74860070DD86 /* BOMB_SIREN-BOMB_SIREN-247265934.mp3 */,
+				F4F3296C236BC77100633A89 /* five-nights-at-freddys-6-am.mp3 */,
 				F44F4A4E235AA344003F8750 /* eureka but betterTests */,
 			);
 			path = "eureka but better";
@@ -265,8 +265,8 @@
 			files = (
 				F44F4A45235AA344003F8750 /* LaunchScreen.storyboard in Resources */,
 				F44F4A42235AA344003F8750 /* Assets.xcassets in Resources */,
-				533E8F86236A74860070DD86 /* BOMB_SIREN-BOMB_SIREN-247265934.mp3 in Resources */,
 				F44F4A40235AA343003F8750 /* Main.storyboard in Resources */,
+				F4F3296D236BC77100633A89 /* five-nights-at-freddys-6-am.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

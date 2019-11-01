@@ -11,16 +11,16 @@ import SafariServices
 import AVFoundation
 
 class ViewController: UIViewController, SFSafariViewControllerDelegate {
-   var bombAudio = AVAudioPlayer()
+   var fnafAlarm = AVAudioPlayer()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        let sound = Bundle.main.path(forResource: "BOMB_SIREN-BOMB_SIREN-247265934", ofType: "mp3")
+        let sound = Bundle.main.path(forResource: "five-nights-at-freddys-6-am", ofType: "mp3")
         do {
             
-            bombAudio = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+            fnafAlarm = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
             
         }
         catch {
@@ -30,7 +30,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     }
     
     @IBAction func soundButton(_ sender: Any) {
-        bombAudio.play()
+        fnafAlarm.play()
     }
 }
 
