@@ -61,7 +61,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         }
         //load subjects
          numOfSubjects = importantSubjects.count - 1
-        if subjectNum > numOfSubjects  {
+        if numOfSubjects == -1 {
             print("nothing inside")
             subjectLabel.text = "No subjects"
             descriptionLabel.text = "to study"
