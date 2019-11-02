@@ -57,11 +57,14 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
             print("no Subjects")
         }
         //load subjects
+        if importantSubjects == nil {
+            print("nothing inside")
+        } else {
         importantSubjects = subject.sorted{
             $0.grade < $1.grade
            
         }
-        print(importantSubjects.map{$0.mainSubject})
+        }
         
         numOfSubjects = importantSubjects.count - 1
         //Check if you have subjects
