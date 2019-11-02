@@ -250,6 +250,7 @@
                         <outlet property="minutesLabel" destination="0Aq-KM-zfk" id="cKo-a5-f7g"/>
                         <outlet property="nextSubjectLabel" destination="7ug-CX-7ha" id="4cr-gY-7sO"/>
                         <outlet property="secondsLabel" destination="MQL-At-Nhd" id="Yia-DB-uMg"/>
+                        <outlet property="startButton" destination="2qA-SA-a2W" id="WT0-8H-8Ix"/>
                         <outlet property="subjectLabel" destination="Vgo-Jb-bnC" id="cwM-EU-ssn"/>
                         <segue destination="Plc-m5-W6R" kind="presentation" identifier="studyDone" id="QB2-LF-GUp"/>
                     </connections>

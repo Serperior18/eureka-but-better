@@ -18,6 +18,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     @IBOutlet weak var minutesLabel: UILabel!
     @IBOutlet weak var secondsLabel: UILabel!
     @IBOutlet weak var nextSubjectLabel: UILabel!
+    @IBOutlet weak var startButton: UIButton!
     
     var twoDigit = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61"]
     var timerwhat = 5 // <- how many seconds
@@ -60,7 +61,6 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
             print("no Subjects")
         }
         //load subjects
-         numOfSubjects = importantSubjects.count - 1
         if numOfSubjects == -1 {
             print("nothing inside")
             subjectLabel.text = "No subjects"
@@ -70,6 +70,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
             $0.grade < $1.grade
            
         }
+            numOfSubjects = importantSubjects.count - 1
         }
         
         //Check if you have subjects
@@ -81,7 +82,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     }
         
         
-        if subjectNum == 0 {
+        if  numOfSubjects == subjectNum{
             nextSubjectLabel.text = "Your next subject is: Nothing."
         } else {
             nextSubjectCounter = subjectNum + 1
@@ -94,6 +95,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     
     @IBAction func startButton(_ sender: Any) {
     runFunction = true
+        startButton.isEnabled = false
         timerwhat = 5 //Seconds
         timerwhat2 = 0 // minutes
         
@@ -107,14 +109,24 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         if timerwhat == 0 && timerwhat2 == 0 {
             fnafAlarm.play()
             subjectNum += 1
+            nextSubjectCounter += 1
             performSegue(withIdentifier: "studyDone", sender: nil)
             if subjectNum > numOfSubjects {
                 subjectNum = 0
                 runFunction = false
+                startButton.isEnabled = true
+                
             } else {
             
             subjectLabel.text = importantSubjects[subjectNum].mainSubject
             descriptionLabel.text = importantSubjects[subjectNum].description
+                if  numOfSubjects == subjectNum{
+                    nextSubjectLabel.text = "Your next subject is: Nothing."
+                } else {
+                    nextSubjectCounter = subjectNum + 1
+                    nextSubjectLabel.text = "Your next subject is:  \(importantSubjects[nextSubjectCounter].mainSubject)."
+                }
+                
             runFunction = false
             }
         } else {
