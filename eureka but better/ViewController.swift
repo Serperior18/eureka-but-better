@@ -94,6 +94,8 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     
     @IBAction func startButton(_ sender: Any) {
     runFunction = true
+        timerwhat = 5 //Seconds
+        timerwhat2 = 0 // minutes
         
     }
     
@@ -106,16 +108,15 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
             fnafAlarm.play()
             subjectNum += 1
             performSegue(withIdentifier: "studyDone", sender: nil)
-            if subjectNum == numOfSubjects || subjectNum > numOfSubjects {
+            if subjectNum > numOfSubjects {
                 subjectNum = 0
-            }
+                runFunction = false
+            } else {
             
             subjectLabel.text = importantSubjects[subjectNum].mainSubject
             descriptionLabel.text = importantSubjects[subjectNum].description
-            timer?.invalidate()
-            timerwhat = 5 //Seconds
-            timerwhat2 = 0 // minutes
-            
+            runFunction = false
+            }
         } else {
             timerwhat -= 1
             if timerwhat < 0 {

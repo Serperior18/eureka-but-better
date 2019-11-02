@@ -91,6 +91,7 @@ class SubjectTableViewController: UITableViewController {
     @IBAction func doneButtonPressed(_ sender: Any) {
         print("its pressed")
         dismiss(animated: true, completion: nil)
+        Subject.saveToFile(subject: subject)
     }
     
 }

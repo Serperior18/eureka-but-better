@@ -40,16 +40,16 @@ struct Subject: Codable {
     static func saveToFile(subject: [Subject]) {
         let archiveURL = getArchiveURL()
         let propertyListEncoder = PropertyListEncoder()
-        let encodedFriends = try? propertyListEncoder.encode(subject)
-        try? encodedFriends?.write(to: archiveURL, options: .noFileProtection)
+        let encodedSubject = try? propertyListEncoder.encode(subject)
+        try? encodedSubject?.write(to: archiveURL, options: .noFileProtection)
     }
     
     static func loadFromFile() -> [Subject]? {
         let archiveURL = getArchiveURL()
         let propertyListDecoder = PropertyListDecoder()
-        guard let retrievedFriendsData = try? Data(contentsOf: archiveURL) else { return nil }
-        guard let decodedFriends = try? propertyListDecoder.decode(Array<Subject>.self, from: retrievedFriendsData) else { return nil }
-        return decodedFriends
+        guard let retrievedSubjectData = try? Data(contentsOf: archiveURL) else { return nil }
+        guard let decodedSubject = try? propertyListDecoder.decode(Array<Subject>.self, from: retrievedSubjectData) else { return nil }
+        return decodedSubject
     }
 
 }
