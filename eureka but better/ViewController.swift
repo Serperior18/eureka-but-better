@@ -31,14 +31,12 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     var numOfSubjects = 0
     var subjectNum = 0
     var nextSubjectCounter = 0
-    var subjectShow = ""
-    var descriptionShow = ""
     
     var importantSubjects: [Subject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+       //Timer
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         
         let sound = Bundle.main.path(forResource: "five-nights-at-freddys-6-am", ofType: "mp3")
@@ -50,25 +48,30 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         catch {
             print(error)
         }
-        // Do any additional setup after loading the view, typically from a nib.
+        timerwhat = 5
+        timerwhat2 = 0
+        //Get subjects
         if let loadedSubjects = Subject.loadFromFile() {
             subject = loadedSubjects
         } else {
             print("no Subjects")
         }
-        
+        //load subjects
         importantSubjects = subject.sorted{
             $0.grade < $1.grade
            
         }
         print(importantSubjects.map{$0.mainSubject})
         
-        subjectShow = importantSubjects[subjectNum].mainSubject
-        descriptionShow = importantSubjects[subjectNum].description
-        
-        subjectLabel.text = subjectShow
-        descriptionLabel.text = descriptionShow
         numOfSubjects = importantSubjects.count - 1
+        //Check if you have subjects
+        if  subjectNum > numOfSubjects {
+            subjectLabel.text = "No subjects"
+            descriptionLabel.text = "to study"
+        } else {
+        subjectLabel.text = importantSubjects[subjectNum].mainSubject
+        descriptionLabel.text = importantSubjects[subjectNum].description
+    }
         
         
         if subjectNum == 0 {

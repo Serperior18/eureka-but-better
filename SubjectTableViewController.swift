@@ -27,7 +27,9 @@ class SubjectTableViewController: UITableViewController {
     @IBAction func unwindToSubjectsTable(segue: UIStoryboardSegue) {
         if segue.identifier == "unwindSave" {
             if let sourceVC = segue.source as? AddTableViewController {
+                
                 subject.append(sourceVC.subject)
+                Subject.saveToFile(subject: [sourceVC.subject])
                 tableView.reloadData()
             }
         }
