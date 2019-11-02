@@ -9,6 +9,7 @@
 import Foundation
 
 
+
 struct Subject: Codable {
     var mainSubject: String
     var description: String
@@ -52,3 +53,4 @@ struct Subject: Codable {
     }
 
 }
+
