@@ -57,8 +57,11 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
             print("no Subjects")
         }
         //load subjects
-        if importantSubjects == nil {
+         numOfSubjects = importantSubjects.count - 1
+        if subjectNum > numOfSubjects  {
             print("nothing inside")
+            subjectLabel.text = "No subjects"
+            descriptionLabel.text = "to study"
         } else {
         importantSubjects = subject.sorted{
             $0.grade < $1.grade
@@ -66,11 +69,9 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         }
         }
         
-        numOfSubjects = importantSubjects.count - 1
         //Check if you have subjects
         if  subjectNum > numOfSubjects {
-            subjectLabel.text = "No subjects"
-            descriptionLabel.text = "to study"
+            
         } else {
         subjectLabel.text = importantSubjects[subjectNum].mainSubject
         descriptionLabel.text = importantSubjects[subjectNum].description
