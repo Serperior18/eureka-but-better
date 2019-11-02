@@ -19,6 +19,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     @IBOutlet weak var secondsLabel: UILabel!
     @IBOutlet weak var nextSubjectLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var restartButton: UIButton!
     
     var twoDigit = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61"]
     var timerwhat = 5 // <- how many seconds
@@ -37,6 +38,10 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        restartButton.isEnabled = false
+        restartButton.isHidden = true
+        
         let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
         
         print("💁‍♂️ Your plist is at: \(documentsPath)")
@@ -61,7 +66,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
             print("no Subjects")
         }
         //load subjects
-        if numOfSubjects == -1 {
+        if numOfSubjects == 0 {
             print("nothing inside")
             subjectLabel.text = "No subjects"
             descriptionLabel.text = "to study"
@@ -74,7 +79,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         }
         
         //Check if you have subjects
-        if  subjectNum > numOfSubjects {
+        if  subjectNum > numOfSubjects || subjectNum == numOfSubjects {
             
         } else {
         subjectLabel.text = importantSubjects[subjectNum].mainSubject
@@ -101,6 +106,29 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         
     }
     
+    @IBAction func restartButtonPressed(_ sender: Any) {
+        subjectNum = 0
+        
+        if subjectNum > numOfSubjects {
+            subjectLabel.text = "No more"
+            descriptionLabel.text = "subjects"
+            restartButton.isHidden = false
+            restartButton.isEnabled = true
+            runFunction = false
+            startButton.isEnabled = true
+            
+        } else {
+            
+            subjectLabel.text = importantSubjects[subjectNum].mainSubject
+            descriptionLabel.text = importantSubjects[subjectNum].description
+            if  numOfSubjects == subjectNum{
+                nextSubjectLabel.text = "Your next subject is: Nothing."
+            } else {
+                nextSubjectCounter = subjectNum + 1
+                nextSubjectLabel.text = "Your next subject is:  \(importantSubjects[nextSubjectCounter].mainSubject)."
+            }
+        }
+    }
     
     @objc func updateCounter() {
         timeElapsed += 1
@@ -112,7 +140,10 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
             nextSubjectCounter += 1
             performSegue(withIdentifier: "studyDone", sender: nil)
             if subjectNum > numOfSubjects {
-                subjectNum = 0
+                subjectLabel.text = "No more"
+                descriptionLabel.text = "subjects"
+                restartButton.isHidden = false
+                restartButton.isEnabled = true
                 runFunction = false
                 startButton.isEnabled = true
                 
