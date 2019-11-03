@@ -20,6 +20,49 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     @IBOutlet weak var nextSubjectLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var restartButton: UIButton!
+    @objc func updateCounter() {
+        if !runFunction { return }
+        
+        if timerwhat == 0 && timerwhat2 == 0 {
+            fnafAlarm.play()
+            subjectNum += 1
+            nextSubjectCounter += 1
+            // check the number
+            print(subjectNum)
+            print(numOfSubjects)
+            performSegue(withIdentifier: "studyDone", sender: nil)
+            if subjectNum > numOfSubjects {
+                subjectLabel.text = "No more"
+                descriptionLabel.text = "subjects"
+                restartButton.isHidden = false
+                restartButton.isEnabled = true
+                runFunction = false
+                startButton.isEnabled = true
+                
+            } else {
+                
+                subjectLabel.text = importantSubjects[subjectNum].mainSubject
+                descriptionLabel.text = importantSubjects[subjectNum].description
+                if  numOfSubjects == subjectNum{
+                    nextSubjectLabel.text = "Your next subject is: Nothing."
+                } else {
+                    nextSubjectCounter = subjectNum + 1
+                    nextSubjectLabel.text = "Your next subject is:  \(importantSubjects[nextSubjectCounter].mainSubject)."
+                }
+                
+                runFunction = false
+            }
+        } else {
+            timerwhat -= 1
+            if timerwhat < 0 {
+                timerwhat2 -= 1
+                timerwhat = 59
+                secondsLabel.text = twoDigit[timerwhat]
+            }
+            secondsLabel.text = twoDigit[timerwhat]
+            minutesLabel.text = twoDigit[timerwhat2]
+        }
+    }
     
     var twoDigit = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61"]
     var timerwhat = 5 // <- how many seconds
@@ -107,18 +150,15 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     }
     
     @IBAction func restartButtonPressed(_ sender: Any) {
-        subjectNum = 0
-        
         if subjectNum > numOfSubjects {
-            subjectLabel.text = "No more"
-            descriptionLabel.text = "subjects"
+            subjectLabel.text = "Please"
+            descriptionLabel.text = "restart"
             restartButton.isHidden = false
             restartButton.isEnabled = true
-            runFunction = false
             startButton.isEnabled = true
-            
+            subjectNum = 0
         } else {
-            
+            subjectNum = 0
             subjectLabel.text = importantSubjects[subjectNum].mainSubject
             descriptionLabel.text = importantSubjects[subjectNum].description
             if  numOfSubjects == subjectNum{
@@ -130,47 +170,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         }
     }
     
-    @objc func updateCounter() {
-        timeElapsed += 1
-        if !runFunction { return }
-        
-        if timerwhat == 0 && timerwhat2 == 0 {
-            fnafAlarm.play()
-            subjectNum += 1
-            nextSubjectCounter += 1
-            performSegue(withIdentifier: "studyDone", sender: nil)
-            if subjectNum > numOfSubjects {
-                subjectLabel.text = "No more"
-                descriptionLabel.text = "subjects"
-                restartButton.isHidden = false
-                restartButton.isEnabled = true
-                runFunction = false
-                startButton.isEnabled = true
-                
-            } else {
-            
-            subjectLabel.text = importantSubjects[subjectNum].mainSubject
-            descriptionLabel.text = importantSubjects[subjectNum].description
-                if  numOfSubjects == subjectNum{
-                    nextSubjectLabel.text = "Your next subject is: Nothing."
-                } else {
-                    nextSubjectCounter = subjectNum + 1
-                    nextSubjectLabel.text = "Your next subject is:  \(importantSubjects[nextSubjectCounter].mainSubject)."
-                }
-                
-            runFunction = false
-            }
-        } else {
-            timerwhat -= 1
-            if timerwhat < 0 {
-                timerwhat2 -= 1
-                timerwhat = 59
-                secondsLabel.text = twoDigit[timerwhat]
-            }
-            secondsLabel.text = twoDigit[timerwhat]
-            minutesLabel.text = twoDigit[timerwhat2]
-        }
-    }
+   
 
     
     

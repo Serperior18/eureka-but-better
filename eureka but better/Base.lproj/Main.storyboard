@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -202,10 +202,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot 2019-11-01 at 1.57.19 PM" translatesAutoresizingMaskIntoConstraints="NO" id="Yho-dk-t5a">
-                                <rect key="frame" x="94" y="182" width="226" height="160"/>
+                                <rect key="frame" x="94" y="182.5" width="226" height="159"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot 2019-11-01 at 1.57.19 PM" translatesAutoresizingMaskIntoConstraints="NO" id="L7Y-fz-gAQ">
-                                <rect key="frame" x="94" y="433" width="226" height="160"/>
+                                <rect key="frame" x="94" y="433.5" width="226" height="159"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qA-SA-a2W">
                                 <rect key="frame" x="95.5" y="704" width="223" height="82"/>
@@ -285,6 +285,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="restartButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6gJ-Te-MNb"/>
                                     <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GvN-tb-REE"/>
                                 </connections>
                             </button>
@@ -334,6 +335,7 @@
                         <outlet property="descriptionLabel" destination="WVr-gt-uCq" id="n2y-xE-9nl"/>
                         <outlet property="minutesLabel" destination="0Aq-KM-zfk" id="cKo-a5-f7g"/>
                         <outlet property="nextSubjectLabel" destination="7ug-CX-7ha" id="4cr-gY-7sO"/>
+                        <outlet property="restartButton" destination="h7P-5I-mlH" id="01b-bU-M7E"/>
                         <outlet property="secondsLabel" destination="MQL-At-Nhd" id="Yia-DB-uMg"/>
                         <outlet property="startButton" destination="2qA-SA-a2W" id="WT0-8H-8Ix"/>
                         <outlet property="subjectLabel" destination="Vgo-Jb-bnC" id="cwM-EU-ssn"/>
@@ -600,7 +602,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Screenshot 2019-11-01 at 1.57.19 PM" width="226" height="159.5"/>
+        <image name="Screenshot 2019-11-01 at 1.57.19 PM" width="226" height="159"/>
         <image name="Screenshot 2019-11-01 at 2.19.18 PM" width="223" height="82"/>
         <image name="Screenshot 2019-11-01 at 2.35.24 PM" width="259" height="128"/>
     </resources>
