@@ -154,13 +154,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     }
     
     @IBAction func restartButtonPressed(_ sender: Any) {
-        if let loadedSubjects = Subject.loadFromFile() {
-            subject = loadedSubjects
-        } else {
-            print("no Subjects")
-        }
-        importantSubjects = subject.sorted{
-            $0.grade < $1.grade}
+        viewDidLoad()
         if subjectNum > numOfSubjects {
             subjectLabel.text = "Please"
             descriptionLabel.text = "restart"
