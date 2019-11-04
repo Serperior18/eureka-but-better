@@ -95,7 +95,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         
         print("💁‍♂️ Your plist is at: \(documentsPath)")
        //Timer
-        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         
         let sound = Bundle.main.path(forResource: "five-nights-at-freddys-6-am", ofType: "mp3")
         do {
@@ -106,8 +106,6 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         catch {
             print(error)
         }
-        timerwhat = 0
-        timerwhat2 = 60
         //Get subjects
         if let loadedSubjects = Subject.loadFromFile() {
             subject = loadedSubjects
@@ -146,20 +144,18 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     }
     
     
-    
-    @IBAction func startButton(_ sender: Any) {
-    runFunction = true
-        startButton.isEnabled = false
-        subjectButton.isEnabled = false
-        timerwhat = 50 //Seconds
-        timerwhat2 = 0 // minutes
-        viewDidLoad()
-        
-    }
-    
     @IBAction func restartButtonPressed(_ sender: Any) {
         
-        viewDidLoad()
+        if let loadedSubjects = Subject.loadFromFile() {
+            subject = loadedSubjects
+        } else {
+            print("no Subjects")
+        }
+        //load subjects
+        
+        importantSubjects = subject.sorted{
+            $0.grade < $1.grade}
+        
         if subjectNum > numOfSubjects {
             subjectLabel.text = "Please"
             descriptionLabel.text = "restart"
@@ -183,16 +179,33 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
                 nextSubjectLabel.text = "Your next subject is:  \(importantSubjects[nextSubjectCounter].mainSubject)."
             }
         }
+        
+    }
+    @IBAction func startButton(_ sender: Any) {
+        if let loadedSubjects = Subject.loadFromFile() {
+            subject = loadedSubjects
+        } else {
+            print("no Subjects")
+        }
+        //load subjects
+        if numOfSubjects == -1 {
+            print("nothing inside")
+            subjectLabel.text = "No subjects"
+            descriptionLabel.text = "to study"
+        } else {
+            importantSubjects = subject.sorted{
+                $0.grade < $1.grade
+                
+            }
+        runFunction = true
+        startButton.isEnabled = false
+        subjectButton.isEnabled = false
+        timerwhat = 5 //Seconds
+        timerwhat2 = 0 // minutes
+        
     }
     
-   
-
-    
-    
-    
-    
-    
-    
+    }
     
 }
 
