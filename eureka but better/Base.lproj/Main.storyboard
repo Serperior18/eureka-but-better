@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Credits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjn-z2-Jb3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Credits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjn-z2-Jb3">
                                 <rect key="frame" x="98" y="44" width="219" height="108"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
@@ -35,11 +35,14 @@
                         <color key="backgroundColor" red="1" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="sjn-z2-Jb3" firstAttribute="top" secondItem="lU0-BW-SdO" secondAttribute="top" id="3cV-9s-c2v"/>
                             <constraint firstItem="lrC-rG-XOd" firstAttribute="top" secondItem="lU0-BW-SdO" secondAttribute="top" constant="85" id="3gC-eX-2el"/>
                             <constraint firstItem="lrC-rG-XOd" firstAttribute="leading" secondItem="71F-Tu-M5D" secondAttribute="leadingMargin" id="5Zi-E0-AFX"/>
+                            <constraint firstItem="lU0-BW-SdO" firstAttribute="bottom" secondItem="sjn-z2-Jb3" secondAttribute="bottom" constant="710" id="FGt-kU-x6W"/>
                             <constraint firstItem="lrC-rG-XOd" firstAttribute="trailing" secondItem="71F-Tu-M5D" secondAttribute="trailingMargin" id="m7H-IZ-iRL"/>
-                            <constraint firstItem="lrC-rG-XOd" firstAttribute="centerX" secondItem="sjn-z2-Jb3" secondAttribute="centerX" id="tIQ-QJ-3gk"/>
+                            <constraint firstItem="sjn-z2-Jb3" firstAttribute="centerX" secondItem="lrC-rG-XOd" secondAttribute="centerX" id="nqf-v1-yTD"/>
                             <constraint firstItem="lU0-BW-SdO" firstAttribute="bottom" secondItem="lrC-rG-XOd" secondAttribute="bottom" constant="22" id="uOS-LG-4tI"/>
+                            <constraint firstItem="sjn-z2-Jb3" firstAttribute="leading" secondItem="lU0-BW-SdO" secondAttribute="leading" constant="98" id="zlI-qS-wCB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lU0-BW-SdO"/>
                         <connections>
@@ -420,7 +423,7 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="grade" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1u4-aJ-am0">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="grade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1u4-aJ-am0">
                                                             <rect key="frame" x="283" y="0.0" width="131" height="43"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
