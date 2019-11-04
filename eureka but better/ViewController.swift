@@ -82,8 +82,11 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     
     var importantSubjects: [Subject] = []
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         restartButton.isEnabled = false
         restartButton.isHidden = true
@@ -92,7 +95,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         
         print("💁‍♂️ Your plist is at: \(documentsPath)")
        //Timer
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         
         let sound = Bundle.main.path(forResource: "five-nights-at-freddys-6-am", ofType: "mp3")
         do {
@@ -145,16 +148,17 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     
     
     @IBAction func startButton(_ sender: Any) {
-        viewDidLoad()
     runFunction = true
         startButton.isEnabled = false
         subjectButton.isEnabled = false
-        timerwhat = 0 //Seconds
-        timerwhat2 = 60 // minutes
+        timerwhat = 50 //Seconds
+        timerwhat2 = 0 // minutes
+        viewDidLoad()
         
     }
     
     @IBAction func restartButtonPressed(_ sender: Any) {
+        
         viewDidLoad()
         if subjectNum > numOfSubjects {
             subjectLabel.text = "Please"
