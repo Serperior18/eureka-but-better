@@ -286,7 +286,6 @@
                                 </state>
                                 <connections>
                                     <action selector="restartButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6gJ-Te-MNb"/>
-                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GvN-tb-REE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Subject:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivy-I9-QpZ">
@@ -338,6 +337,7 @@
                         <outlet property="restartButton" destination="h7P-5I-mlH" id="01b-bU-M7E"/>
                         <outlet property="secondsLabel" destination="MQL-At-Nhd" id="Yia-DB-uMg"/>
                         <outlet property="startButton" destination="2qA-SA-a2W" id="WT0-8H-8Ix"/>
+                        <outlet property="subjectButton" destination="9lO-w2-mfZ" id="fX7-nh-rtg"/>
                         <outlet property="subjectLabel" destination="Vgo-Jb-bnC" id="cwM-EU-ssn"/>
                         <segue destination="Plc-m5-W6R" kind="presentation" identifier="studyDone" id="QB2-LF-GUp"/>
                     </connections>

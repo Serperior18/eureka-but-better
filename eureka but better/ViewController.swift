@@ -20,11 +20,13 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     @IBOutlet weak var nextSubjectLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var restartButton: UIButton!
+    @IBOutlet weak var subjectButton: UIButton!
     @objc func updateCounter() {
         if !runFunction { return }
         
         if timerwhat == 0 && timerwhat2 == 0 {
             fnafAlarm.play()
+            subjectButton.isEnabled = true
             subjectNum += 1
             nextSubjectCounter += 1
             // check the number
@@ -37,7 +39,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
                 restartButton.isHidden = false
                 restartButton.isEnabled = true
                 runFunction = false
-                startButton.isEnabled = true
+                startButton.isEnabled = false
                 
             } else {
                 
@@ -144,6 +146,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     @IBAction func startButton(_ sender: Any) {
     runFunction = true
         startButton.isEnabled = false
+        subjectButton.isEnabled = false
         timerwhat = 5 //Seconds
         timerwhat2 = 0 // minutes
         
@@ -155,9 +158,12 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
             descriptionLabel.text = "restart"
             restartButton.isHidden = false
             restartButton.isEnabled = true
-            startButton.isEnabled = true
+            startButton.isEnabled = false
             subjectNum = 0
+            runFunction = false
+            print(subjectNum)
         } else {
+            startButton.isEnabled = false
             subjectNum = 0
             subjectLabel.text = importantSubjects[subjectNum].mainSubject
             descriptionLabel.text = importantSubjects[subjectNum].description
