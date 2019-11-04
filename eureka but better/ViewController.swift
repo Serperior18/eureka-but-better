@@ -27,6 +27,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         if timerwhat == 0 && timerwhat2 == 0 {
             fnafAlarm.play()
             subjectButton.isEnabled = true
+            startButton.isEnabled = true
             subjectNum += 1
             nextSubjectCounter += 1
             // check the number
@@ -102,8 +103,8 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         catch {
             print(error)
         }
-        timerwhat = 5
-        timerwhat2 = 0
+        timerwhat = 0
+        timerwhat2 = 60
         //Get subjects
         if let loadedSubjects = Subject.loadFromFile() {
             subject = loadedSubjects
@@ -111,7 +112,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
             print("no Subjects")
         }
         //load subjects
-        if numOfSubjects == 0 {
+        if numOfSubjects == -1 {
             print("nothing inside")
             subjectLabel.text = "No subjects"
             descriptionLabel.text = "to study"
@@ -124,7 +125,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         }
         
         //Check if you have subjects
-        if  subjectNum > numOfSubjects || subjectNum == numOfSubjects {
+        if  subjectNum > numOfSubjects {
             
         } else {
         subjectLabel.text = importantSubjects[subjectNum].mainSubject
@@ -132,7 +133,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     }
         
         
-        if  numOfSubjects == subjectNum{
+        if  numOfSubjects < subjectNum || numOfSubjects == subjectNum {
             nextSubjectLabel.text = "Your next subject is: Nothing."
         } else {
             nextSubjectCounter = subjectNum + 1
@@ -147,12 +148,19 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     runFunction = true
         startButton.isEnabled = false
         subjectButton.isEnabled = false
-        timerwhat = 5 //Seconds
-        timerwhat2 = 0 // minutes
+        timerwhat = 0 //Seconds
+        timerwhat2 = 60 // minutes
         
     }
     
     @IBAction func restartButtonPressed(_ sender: Any) {
+        if let loadedSubjects = Subject.loadFromFile() {
+            subject = loadedSubjects
+        } else {
+            print("no Subjects")
+        }
+        importantSubjects = subject.sorted{
+            $0.grade < $1.grade}
         if subjectNum > numOfSubjects {
             subjectLabel.text = "Please"
             descriptionLabel.text = "restart"
@@ -163,7 +171,9 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
             runFunction = false
             print(subjectNum)
         } else {
-            startButton.isEnabled = false
+            restartButton.isEnabled = false
+            restartButton.isHidden = true
+            startButton.isEnabled = true
             subjectNum = 0
             subjectLabel.text = importantSubjects[subjectNum].mainSubject
             descriptionLabel.text = importantSubjects[subjectNum].description
