@@ -145,6 +145,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     
     
     @IBAction func startButton(_ sender: Any) {
+        viewDidLoad()
     runFunction = true
         startButton.isEnabled = false
         subjectButton.isEnabled = false
