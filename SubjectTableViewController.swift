@@ -39,13 +39,12 @@ class SubjectTableViewController: UITableViewController {
     
     // MARK: - Table view data source
 
-    @IBAction func editButtonPressed(_ sender: Any) {
+    @IBAction func deleteButtonPressed(_ sender: Any) {
         if tableView.isEditing {
             tableView.setEditing(false, animated: true)
         } else {
             tableView.setEditing(true, animated: true)
         }
-        
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections

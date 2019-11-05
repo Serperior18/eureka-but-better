@@ -14,6 +14,7 @@ class AddTableViewController: UITableViewController {
     @IBOutlet weak var descriptionLabel: UITextField!
     @IBOutlet weak var gradeLabel: UITextField!
     var subject: Subject!
+    var newSubject: Subject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,13 +27,13 @@ class AddTableViewController: UITableViewController {
         let grade = gradeLabel.text ?? ""
         
         if segue.identifier == "unwindSave"{
-            subject = Subject(mainSubject: mainSubject, description: description, grade: grade)
-            Subject.saveToFile(subject: [subject])
+            newSubject = Subject(mainSubject: mainSubject, description: description, grade: grade)
         }
     }
 
     @IBAction func cancelButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+        Subject.saveToFile(subject:[newSubject])
     }
     
 
