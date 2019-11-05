@@ -157,15 +157,10 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
             $0.grade < $1.grade}
         
         if subjectNum > numOfSubjects {
-            subjectLabel.text = "Please"
-            descriptionLabel.text = "restart"
-            restartButton.isHidden = false
-            restartButton.isEnabled = true
-            startButton.isEnabled = false
             subjectNum = 0
-            runFunction = false
-            print(subjectNum)
-        } else {
+        }
+        
+        
             restartButton.isEnabled = false
             restartButton.isHidden = true
             startButton.isEnabled = true
@@ -178,7 +173,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
                 nextSubjectCounter = subjectNum + 1
                 nextSubjectLabel.text = "Your next subject is:  \(importantSubjects[nextSubjectCounter].mainSubject)."
             }
-        }
+        
         
     }
     @IBAction func startButton(_ sender: Any) {
