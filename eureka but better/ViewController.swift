@@ -21,6 +21,38 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var restartButton: UIButton!
     @IBOutlet weak var subjectButton: UIButton!
+    
+    var timerwhat = 5 // <- how many seconds
+    var timerwhat2 = 0 // <- how many minutes
+    var timer: Timer?
+    var timeElapsed = 0
+    var runFunction = false
+    var subject: [Subject]!
+    var numOfSubjects = 0
+    var subjectNum = 0
+    var nextSubjectCounter = 0
+    var importantSubjects: [Subject] = []
+    
+    func reloadData() {
+        if let loadedSubjects = Subject.loadFromFile() {
+            subject = loadedSubjects
+        } else {
+            print("no Subjects")
+        }
+        //load subjects
+        if numOfSubjects == -1 {
+            print("nothing inside")
+            subjectLabel.text = "No subjects"
+            descriptionLabel.text = "to study"
+        } else {
+            importantSubjects = subject.sorted{
+                $0.grade < $1.grade
+                
+            }
+            numOfSubjects = importantSubjects.count - 1
+    }
+    }
+    
     @objc func updateCounter() {
         if !runFunction { return }
         
@@ -68,19 +100,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     }
     
     var twoDigit = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61"]
-    var timerwhat = 5 // <- how many seconds
-    var timerwhat2 = 0 // <- how many minutes
-    var timer: Timer?
-    var timeElapsed = 0
-    var runFunction = false
     
-    var subject: [Subject]!
-    
-    var numOfSubjects = 0
-    var subjectNum = 0
-    var nextSubjectCounter = 0
-    
-    var importantSubjects: [Subject] = []
     
     
     
@@ -107,23 +127,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
             print(error)
         }
         //Get subjects
-        if let loadedSubjects = Subject.loadFromFile() {
-            subject = loadedSubjects
-        } else {
-            print("no Subjects")
-        }
-        //load subjects
-        if numOfSubjects == -1 {
-            print("nothing inside")
-            subjectLabel.text = "No subjects"
-            descriptionLabel.text = "to study"
-        } else {
-        importantSubjects = subject.sorted{
-            $0.grade < $1.grade
-           
-        }
-            numOfSubjects = importantSubjects.count - 1
-        }
+        reloadData()
         
         //Check if you have subjects
         if  subjectNum > numOfSubjects {
@@ -146,16 +150,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     
     @IBAction func restartButtonPressed(_ sender: Any) {
         
-        if let loadedSubjects = Subject.loadFromFile() {
-            subject = loadedSubjects
-        } else {
-            print("no Subjects")
-        }
-        //load subjects
-        
-        importantSubjects = subject.sorted{
-            $0.grade < $1.grade}
-        
+        reloadData()
         if subjectNum > numOfSubjects || subjectNum == numOfSubjects {
             subjectNum = 0
         }
@@ -176,21 +171,13 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         
     }
     @IBAction func startButton(_ sender: Any) {
-        if let loadedSubjects = Subject.loadFromFile() {
-            subject = loadedSubjects
-        } else {
-            print("no Subjects")
-        }
+        reloadData()
         //load subjects
         if numOfSubjects == -1 {
             print("nothing inside")
             subjectLabel.text = "No subjects"
             descriptionLabel.text = "to study"
         } else {
-            importantSubjects = subject.sorted{
-                $0.grade < $1.grade
-                
-            }
             if subjectNum > numOfSubjects {
                 restartButton.isHidden = false
                 restartButton.isEnabled = true
