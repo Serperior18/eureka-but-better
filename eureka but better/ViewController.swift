@@ -156,7 +156,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         importantSubjects = subject.sorted{
             $0.grade < $1.grade}
         
-        if subjectNum > numOfSubjects {
+        if subjectNum > numOfSubjects || subjectNum == numOfSubjects {
             subjectNum = 0
         }
         
@@ -164,7 +164,6 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
             restartButton.isEnabled = false
             restartButton.isHidden = true
             startButton.isEnabled = true
-            subjectNum = 0
             subjectLabel.text = importantSubjects[subjectNum].mainSubject
             descriptionLabel.text = importantSubjects[subjectNum].description
             if  numOfSubjects == subjectNum{
@@ -191,6 +190,10 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
             importantSubjects = subject.sorted{
                 $0.grade < $1.grade
                 
+            }
+            if subjectNum > numOfSubjects {
+                restartButton.isHidden = false
+                restartButton.isEnabled = true
             }
         runFunction = true
         startButton.isEnabled = false

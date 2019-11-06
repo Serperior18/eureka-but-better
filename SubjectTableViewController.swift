@@ -28,8 +28,8 @@ class SubjectTableViewController: UITableViewController {
         if segue.identifier == "unwindSave" {
             if let sourceVC = segue.source as? AddTableViewController {
                 
-                subject.append(sourceVC.subject)
-                Subject.saveToFile(subject: [sourceVC.subject])
+                subject.append(sourceVC.newSubject)
+                Subject.saveToFile(subject: [sourceVC.newSubject])
                 tableView.reloadData()
             }
         }
