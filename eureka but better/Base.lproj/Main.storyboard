@@ -13,12 +13,6 @@
         <!--Credits View Controller-->
         <scene sceneID="npe-Tc-bsm">
             <objects>
-                <tapGestureRecognizer id="z6Y-pR-kaK">
-                    <connections>
-                        <action selector="screenTapped:" destination="hzK-l0-X6x" id="DTN-r5-g4e"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oFc-j7-JSp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="hzK-l0-X6x" customClass="CreditsViewController" customModule="eureka_but_better" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="71F-Tu-M5D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -56,13 +50,18 @@
                         </connections>
                     </view>
                 </viewController>
+                <tapGestureRecognizer id="z6Y-pR-kaK">
+                    <connections>
+                        <action selector="screenTapped:" destination="hzK-l0-X6x" id="DTN-r5-g4e"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oFc-j7-JSp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1353.6231884057972" y="146.65178571428569"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="gih-xb-VRM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uV8-3S-V75" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="aUr-AK-xU0" customClass="SettingsViewController" customModule="eureka_but_better" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BNp-YR-z4r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -132,6 +131,7 @@
                         <outlet property="closeButton" destination="tNV-aW-CMO" id="uut-vW-BCe"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uV8-3S-V75" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-610.14492753623188" y="146.65178571428569"/>
         </scene>

@@ -33,7 +33,6 @@ class AddTableViewController: UITableViewController {
 
     @IBAction func cancelButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-        Subject.saveToFile(subject:[newSubject])
     }
     
 
