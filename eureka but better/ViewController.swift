@@ -70,8 +70,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
                 
             } else {
                 
-                subjectLabel.text = importantSubjects[subjectNum].mainSubject
-                descriptionLabel.text = importantSubjects[subjectNum].description
+    
                 if  numOfSubjects == subjectNum{
                     nextSubjectLabel.text = "Your next subject is: Nothing."
                 } else {
@@ -148,6 +147,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         if subjectNum > numOfSubjects || subjectNum == numOfSubjects {
             subjectNum = 0
         }
+        if numOfSubjects != -1 {
         
         
             restartButton.isEnabled = false
@@ -161,7 +161,10 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
                 nextSubjectCounter = subjectNum + 1
                 nextSubjectLabel.text = "Your next subject is:  \(importantSubjects[nextSubjectCounter].mainSubject)."
             }
-        
+        } else {
+            subjectLabel.text = " Please Add"
+            descriptionLabel.text = "A Subject"
+        }
         
     }
     @IBAction func startButton(_ sender: Any) {
@@ -172,6 +175,8 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
             subjectLabel.text = "No subjects"
             descriptionLabel.text = "to study"
         } else {
+            subjectLabel.text = importantSubjects[subjectNum].mainSubject
+            descriptionLabel.text = importantSubjects[subjectNum].description
             if subjectNum > numOfSubjects {
                 restartButton.isHidden = false
                 restartButton.isEnabled = true
