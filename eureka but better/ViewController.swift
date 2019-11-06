@@ -40,18 +40,12 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
             print("no Subjects")
         }
         //load subjects
-        if numOfSubjects == -1 {
-            print("nothing inside")
-            subjectLabel.text = "No subjects"
-            descriptionLabel.text = "to study"
-        } else {
+       
             importantSubjects = subject.sorted{
-                $0.grade < $1.grade
-                
-            }
+                $0.grade < $1.grade}
             numOfSubjects = importantSubjects.count - 1
     }
-    }
+    
     
     @objc func updateCounter() {
         if !runFunction { return }
