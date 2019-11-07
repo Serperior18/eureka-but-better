@@ -121,11 +121,13 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         }
         //Get subjects
         reloadData()
-        
         //Check if you have subjects
         if  subjectNum > numOfSubjects {
             
         } else {
+            importantSubjects = subject.sorted{
+                $0.grade < $1.grade}
+            
         subjectLabel.text = importantSubjects[subjectNum].mainSubject
         descriptionLabel.text = importantSubjects[subjectNum].description
     }
@@ -177,6 +179,12 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         } else {
             subjectLabel.text = importantSubjects[subjectNum].mainSubject
             descriptionLabel.text = importantSubjects[subjectNum].description
+            if  numOfSubjects == subjectNum{
+                nextSubjectLabel.text = "Your next subject is: Nothing."
+            } else {
+                nextSubjectCounter = subjectNum + 1
+                nextSubjectLabel.text = "Your next subject is:  \(importantSubjects[nextSubjectCounter].mainSubject)."
+            }
             if subjectNum > numOfSubjects {
                 restartButton.isHidden = false
                 restartButton.isEnabled = true

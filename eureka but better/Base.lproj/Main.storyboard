@@ -500,7 +500,7 @@
             </objects>
             <point key="canvasLocation" x="876.81159420289862" y="132.58928571428572"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Add  Subjects-->
         <scene sceneID="J7R-Fa-J5Q">
             <objects>
                 <tableViewController id="yRq-Of-rmC" customClass="AddTableViewController" customModule="eureka_but_better" customModuleProvider="target" sceneMemberID="viewController">
@@ -610,7 +610,7 @@
                             <outlet property="delegate" destination="yRq-Of-rmC" id="1MG-Ug-leM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="cMV-42-H72">
+                    <navigationItem key="navigationItem" title="Add  Subjects" id="cMV-42-H72">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0GV-vl-ceD">
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="yRq-Of-rmC" id="HnV-Rn-8qO"/>
