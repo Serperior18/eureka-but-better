@@ -213,19 +213,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XuQ-jT-xU2">
-                                <rect key="frame" x="91" y="695" width="232" height="83"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="83" id="3di-3E-acx"/>
-                                </constraints>
+                                <rect key="frame" x="95.5" y="692.5" width="223" height="82"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Continue" backgroundImage="Screenshot 2019-11-01 at 2.19.18 PM"/>
                                 <connections>
                                     <action selector="continueButtonPressed:" destination="Plc-m5-W6R" eventType="touchUpInside" id="hZ5-OX-rbH"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have completed a subject!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khh-kB-Wy4">
-                                <rect key="frame" x="93" y="194" width="230" height="207"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have completed a subject!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khh-kB-Wy4">
+                                <rect key="frame" x="90" y="170" width="234" height="207"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="234" id="bhB-Kr-SfP"/>
+                                    <constraint firstAttribute="height" constant="207" id="iS7-NQ-jcn"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="43"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -233,9 +233,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.72941176470000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="XuQ-jT-xU2" firstAttribute="centerX" secondItem="r5T-OX-Jr2" secondAttribute="centerX" id="3tz-07-t0M"/>
-                            <constraint firstItem="XuQ-jT-xU2" firstAttribute="leading" secondItem="NAS-tW-7Ai" secondAttribute="leading" constant="91" id="Lxi-Yb-IlL"/>
-                            <constraint firstItem="NAS-tW-7Ai" firstAttribute="bottom" secondItem="XuQ-jT-xU2" secondAttribute="bottom" constant="84" id="dYM-Jt-FW5"/>
+                            <constraint firstItem="khh-kB-Wy4" firstAttribute="centerY" secondItem="r5T-OX-Jr2" secondAttribute="centerY" constant="-174.5" id="0uc-v2-7Sh"/>
+                            <constraint firstItem="khh-kB-Wy4" firstAttribute="leading" secondItem="NAS-tW-7Ai" secondAttribute="leading" constant="90" id="3iF-4n-6jR"/>
+                            <constraint firstItem="NAS-tW-7Ai" firstAttribute="trailing" secondItem="khh-kB-Wy4" secondAttribute="trailing" constant="90" id="7i8-mv-LK6"/>
+                            <constraint firstItem="XuQ-jT-xU2" firstAttribute="centerX" secondItem="r5T-OX-Jr2" secondAttribute="centerX" id="ZJ9-Ib-dJ4"/>
+                            <constraint firstItem="XuQ-jT-xU2" firstAttribute="centerY" secondItem="r5T-OX-Jr2" secondAttribute="centerY" constant="285.5" id="c5x-i3-MXd"/>
+                            <constraint firstItem="khh-kB-Wy4" firstAttribute="centerX" secondItem="r5T-OX-Jr2" secondAttribute="centerX" id="lRA-R5-8jV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NAS-tW-7Ai"/>
                     </view>
@@ -404,10 +407,10 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="132.58928571428572"/>
         </scene>
-        <!--why-->
+        <!--Subjects-->
         <scene sceneID="UTP-Y4-SF3">
             <objects>
-                <tableViewController title="why" id="mlm-mJ-QBk" customClass="SubjectTableViewController" customModule="eureka_but_better" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Subjects" id="mlm-mJ-QBk" customClass="SubjectTableViewController" customModule="eureka_but_better" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SHc-ol-Lgb" customClass="SubjectUITableView" customModule="eureka_but_better" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

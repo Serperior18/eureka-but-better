@@ -207,6 +207,5 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     
     }
     
-}
-
+}                                                
 
