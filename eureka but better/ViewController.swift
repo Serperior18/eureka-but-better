@@ -36,14 +36,15 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     func reloadData() {
         if let loadedSubjects = Subject.loadFromFile() {
             subject = loadedSubjects
+            
         } else {
             print("no Subjects")
         }
         //load subjects
-       
+      
             importantSubjects = subject.sorted{
                 $0.grade < $1.grade}
-            numOfSubjects = importantSubjects.count - 1
+        numOfSubjects = importantSubjects.count - 1
     }
     
     
@@ -120,7 +121,14 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
             print(error)
         }
         //Get subjects
-        reloadData()
+        if let loadedSubjects = Subject.loadFromFile() {
+            subject = loadedSubjects
+            
+            print(numOfSubjects)
+        } else {
+            print("no Subjects")
+        }
+        numOfSubjects = subjectNum - 1
         //Check if you have subjects
         if  subjectNum > numOfSubjects {
             
